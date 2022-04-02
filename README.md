@@ -50,33 +50,17 @@ In order to assess the extent to which patterns in specific weather variables ma
 - The lowest temperature in California over the study period occurred in December 2017 while the lowest temperature in Georgia occurred in January 2018. These low temperatures occurred during the ![December 2017-January 2018 North American cold wave](https://en.wikipedia.org/wiki/December_2017%E2%80%93January_2018_North_American_cold_wave) when a polar vortex froze a large part of the United States. 
 - The highest temperature in California over the study period occurred in late August 2020 while the highest temperature in Georgia occurred in Fall 2019. August 2020 set a ![record](https://www.latimes.com/california/story/2020-09-10/a-sizzling-record-august-was-hottest-month-on-record-in-california) for high temperatures in California.
 
-### Dew point Temperature 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_dewtempt_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_dewtempt_ga.png)
+### Wind Speeds 
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_windsp_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_windsp_ga.png)
 
-- The majority of tenants (6,622) have a contract history of at least 24 months
-- The second largest number of tenants had a history of 12 months or shorter
-- While 3 month contracts were permitted, few tenants selected that option
-- Not all contract history consists of finished contracts as there is no contract end date listed for tenants still within their contract as of 2017-12-31
-- Length of contract history is therefore defined as length from start of first contract to 2017-12-31 for any tenant still within a contract
+- The highest wind speed for California over the reporting period occurred in early Summer 2017 and was higher than that of Georgia, which occurred in early Spring 2020. High winds have traditionally been a ![major contributing factor](https://www.washingtonpost.com/weather/2019/10/28/whats-driving-historic-california-high-wind-events-worsening-wildfires/) to the spread of wildfires in California. 
+- Georgia appeared to have far more days with a minimum wind speed qualifying as calm or no wind than did California. 
+- Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
 
-### Payments and Transactions
-![](https://github.com/christianmconroy/Projects/blob/master/bad_tenant_ml_modeling/images/num_pay_meth_ten.png)
-
-- 9,839 tenants used only one payment method while 309 used 2
-- Bank transfer was the most used payment method followed by direct debit and then cash
-- The deposit is always 3 times the amount of the monthly rent
-- For the contracts that have ended, 86.7% received the deposit back while 5.1% received a partial deposit back
-- 8.2% forfeited their deposit
-
-| Deposit Status        | Number of Contracts|
-| --------------------- |:------------------:|
-| Contract Not Ended Yet| 9,270              |
-| Deposit Returned      | 1,988              |
-| Partially Returned    | 117                |
-| Not Returned          | 188                |
-
-### Evictions and Bad Tenants
+### Sea Level Pressure
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_preciphourly_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_maxpreciphourly_ga.png)
 
 - 32 tenants appeared likely to have been evicted based on having gaps on:
   -The amount of rent they paid versus how much they owed based on contract start and end date or 12/31/2017
@@ -84,6 +68,19 @@ In order to assess the extent to which patterns in specific weather variables ma
 - Almost all had a pattern of late rent payment and three-quarters paid the highest late fee on at least one occasion
 
 | Likely Eviction Cause | Number of Tenants                                              |
+| -------------------------------------------------------------------------------- |:---:|
+| Late payment more than 3 months                                                  | 31  |
+| Rent lateness hitting or exceeding largest late fee (Half of monthly rent extra) | 24  |
+
+### Accumulated Liquid Precipitation
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_preciphourly_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_maxpreciphourly_ga.png)
+
+- Georgia experienced many more days of higher rainfall as measured by liquid precipitation depth over one hour duration, with many days over the study period experiencing maximums of over 10 millimeters. In contrast, California did not experience a single day of liquid precipitation depth of over 10 millimeters during the study period. This makes sense given the dry conditions in California. 
+- The highest liquid precipitation depth for California occurred in early Spring 2017, with the state receiving a maximum of just over 7 millimeters. This period of rainfall in California is well documented, and was at the tail end of the ![wettest Winter in California on record](https://www.kqed.org/news/11407012/the-rainy-season-of-2016-17-is-officially-one-for-the-record-books). 
+- The highest liquid precipitation depth for Georgia occurred in early Summer 2017, when a liquid precipitation depth of over 30 millimeters was recorded in the state. Hurricane season was ![extremely active](https://patch.com/georgia/atlanta/extremely-active-2017-hurricane-season-updated-georgia-forecast) in Georgia in 2017, leading to increased precipitation that year. 
+
+| Likely Eviction Cause | Number of TeGnants                                              |
 | -------------------------------------------------------------------------------- |:---:|
 | Late payment more than 3 months                                                  | 31  |
 | Rent lateness hitting or exceeding largest late fee (Half of monthly rent extra) | 24  |
