@@ -19,12 +19,12 @@ In order to develop the initial proof of concept for model development without t
 
 Further information on the data source can be found in the Documents directory of this repository. 
 
-Weather data is aggregated to the county level by merging the ISD weather data with ![the 2019 US County lines published by the U.S. Census](https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/). The merging is accomplished through conducting a within join on the coordinates of the weather pattern 
+Weather data is aggregated to the county level by merging the ISD weather data with [the 2019 US County lines published by the U.S. Census](https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/). The merging is accomplished through conducting a within join on the coordinates of the weather pattern 
 measurement stations within the ISD data source. 
 
 The wildfire data is published by the ![National Interagency Fire Center](https://data-nifc.opendata.arcgis.com/datasets/nifc::interagency-fire-perimeter-history-all-years/about) and includes measurements on wildfire occurrence and acreage impacted. Wildfire boundaries were intersected with 2019 Us County lines in order to develop a metric for acreage of specific counties impacted  by wildfires on an annual basis. 
 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/output/images/fire_usa_counties.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/fire_usa_counties.png)
 
 The final merged dataset includes minimum and maximum weather variables, number of wildfires, and total acreage damaged by wildfires by month and by county within the state of California between 2016 and 2020. 
 
@@ -46,10 +46,10 @@ In order to assess the extent to which patterns in specific weather variables ma
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_windsp_ca.png)
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_windsp_ga.png)
 
-- The highest wind speed for California over the reporting period occurred in early Summer 2017 and was higher than that of Georgia, which occurred in early Spring 2020. High winds have traditionally been a ![major contributing factor](https://www.washingtonpost.com/weather/2019/10/28/whats-driving-historic-california-high-wind-events-worsening-wildfires/) to the spread of wildfires in California. 
+- The highest wind speed for California over the reporting period occurred in early Summer 2017 and was higher than that of Georgia, which occurred in early Spring 2020. High winds have traditionally been a [major contributing factor](https://www.washingtonpost.com/weather/2019/10/28/whats-driving-historic-california-high-wind-events-worsening-wildfires/) to the spread of wildfires in California. 
 - Georgia appeared to have far more days with a minimum wind speed qualifying as calm or no wind than did California. 
 - Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
-- For all years, low sustained wind speeds were most frequent each year in terms of the maximum wind speed per state per day in Georgia. By contrast, non-threatening or very low wind speeds were most frequent per day in California. The categories are derived from the National Weather Service's ![Graphical Hazardous Weather Outlook](https://www.weather.gov/mlb/seasonal_wind_threat). 
+- For all years, low sustained wind speeds were most frequent each year in terms of the maximum wind speed per state per day in Georgia. By contrast, non-threatening or very low wind speeds were most frequent per day in California. The categories are derived from the National Weather Service's [Graphical Hazardous Weather Outlook](https://www.weather.gov/mlb/seasonal_wind_threat). 
 
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/high_wind_ca.png)
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/high_wind_ga.png)
@@ -67,8 +67,8 @@ In order to assess the extent to which patterns in specific weather variables ma
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_maxpreciphourly_ga.png)
 
 - Georgia experienced many more days of higher rainfall as measured by liquid precipitation depth over one hour duration, with many days over the study period experiencing maximums of over 10 millimeters. In contrast, California did not experience a single day of liquid precipitation depth of over 10 millimeters during the study period. This makes sense given the dry conditions in California. 
-- The highest liquid precipitation depth for California occurred in early Spring 2017, with the state receiving a maximum of just over 7 millimeters. This period of rainfall in California is well documented, and was at the tail end of the ![wettest Winter in California on record](https://www.kqed.org/news/11407012/the-rainy-season-of-2016-17-is-officially-one-for-the-record-books). 
-- The highest liquid precipitation depth for Georgia occurred in early Summer 2017, when a liquid precipitation depth of over 30 millimeters was recorded in the state. Hurricane season was ![extremely active](https://patch.com/georgia/atlanta/extremely-active-2017-hurricane-season-updated-georgia-forecast) in Georgia in 2017, leading to increased precipitation that year. 
+- The highest liquid precipitation depth for California occurred in early Spring 2017, with the state receiving a maximum of just over 7 millimeters. This period of rainfall in California is well documented, and was at the tail end of the [wettest Winter in California on record](https://www.kqed.org/news/11407012/the-rainy-season-of-2016-17-is-officially-one-for-the-record-books). 
+- The highest liquid precipitation depth for Georgia occurred in early Summer 2017, when a liquid precipitation depth of over 30 millimeters was recorded in the state. Hurricane season was [extremely active](https://patch.com/georgia/atlanta/extremely-active-2017-hurricane-season-updated-georgia-forecast) in Georgia in 2017, leading to increased precipitation that year. 
 - Precipitation levels followed an expected trajectory in California over the study period, with maximum precipitation being comparatively low during the Summer months every year.
 
 ## Developing a Predictive Model for Wildfire Spread<br><sup> Methods and Evaluation</sup>
