@@ -22,7 +22,7 @@ Further information on the data source can be found in the Documents directory o
 Weather data is aggregated to the county level by merging the ISD weather data with [the 2019 US County lines published by the U.S. Census](https://www2.census.gov/geo/tiger/TIGER2019/COUNTY/). The merging is accomplished through conducting a within join on the coordinates of the weather pattern 
 measurement stations within the ISD data source. 
 
-The wildfire data is published by the ![National Interagency Fire Center](https://data-nifc.opendata.arcgis.com/datasets/nifc::interagency-fire-perimeter-history-all-years/about) and includes measurements on wildfire occurrence and acreage impacted. Wildfire boundaries were intersected with 2019 Us County lines in order to develop a metric for acreage of specific counties impacted  by wildfires on an annual basis. 
+The wildfire data is published by the [National Interagency Fire Center](https://data-nifc.opendata.arcgis.com/datasets/nifc::interagency-fire-perimeter-history-all-years/about) and includes measurements on wildfire occurrence and acreage impacted. Wildfire boundaries were intersected with 2019 Us County lines in order to develop a metric for acreage of specific counties impacted  by wildfires on an annual basis. 
 
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/fire_usa_counties.png)
 
@@ -37,7 +37,7 @@ In order to assess the extent to which patterns in specific weather variables ma
 
 - While both Georgia and California follow similar patterns of warm and cold temperatures - low temperatures around January, for example - there occurred to be more days with maximum temperatures below 0 in Georgia compared to California. This may be due to the fact that California's temperatures likely vary more widely than those of Georgia due to the larger area covered by the state. 
 - The lowest temperature in California over the study period occurred in December 2017 while the lowest temperature in Georgia occurred in January 2018. These low temperatures occurred during the [December 2017-January 2018 North American cold wave](https://en.wikipedia.org/wiki/December_2017%E2%80%93January_2018_North_American_cold_wave) when a polar vortex froze a large part of the United States. 
-- The highest temperature in California over the study period occurred in late August 2020 while the highest temperature in Georgia occurred in Fall 2019. August 2020 set a ![record](https://www.latimes.com/california/story/2020-09-10/a-sizzling-record-august-was-hottest-month-on-record-in-california) for high temperatures in California.
+- The highest temperature in California over the study period occurred in late August 2020 while the highest temperature in Georgia occurred in Fall 2019. August 2020 set a [record](https://www.latimes.com/california/story/2020-09-10/a-sizzling-record-august-was-hottest-month-on-record-in-california) for high temperatures in California.
 
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/freezing_days_ca.png)
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/freezing_days_ga.png)
