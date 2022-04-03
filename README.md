@@ -32,8 +32,8 @@ The final merged dataset includes minimum and maximum weather variables, number 
 In order to assess the extent to which patterns in specific weather variables may be divergent from normal patterns across all U.S. states (i.e. warmer temperatures in the Summer months and colder temperatures in the winter months), time series on the minimum and maximums across weather variables per day were compared for both California and Georgia.  
 
 ### Air Temperature 
-![](https://github.com/christianmconroy/blob/NOAA_Weather_Analysis/outputs/images/min_max_airremp_ca.png)
-![](https://github.com/christianmconroy/blob/NOAA_Weather_Analysis/outputs/images/min_max_airremp_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/master/outputs/images/min_max_airremp_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/master/outputs/images/min_max_airremp_ga.png)
 
 - While both Georgia and California follow similar patterns of warm and cold temperatures - low temperatures around January, for example - there occurred to be more days with maximum temperatures below 0 in Georgia compared to California. This may be due to the fact that California's temperatures likely vary more widely than those of Georgia due to the larger area covered by the state. 
 - The lowest temperature in California over the study period occurred in December 2017 while the lowest temperature in Georgia occurred in January 2018. These low temperatures occurred during the [December 2017-January 2018 North American cold wave](https://en.wikipedia.org/wiki/December_2017%E2%80%93January_2018_North_American_cold_wave) when a polar vortex froze a large part of the United States. 
