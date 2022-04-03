@@ -78,12 +78,11 @@ In order to assess the extent to which patterns in specific weather variables ma
 ## Developing a Predictive Model for Wildfire Spread<br><sup> Methods and Evaluation</sup>
 
 ### The Target Variable
-- Target created by setting a 25% threshold on the average of 8 normalized features indicative of bad tenant behavior 
-- 25% threshold used to capture “bad” tenants and not just tenants likely to get evicted
-- Aggregated values based on whatever the time period is for the tenant 
-- The labelling window encompasses the about 72-month period between the first contract date and the last transaction payments recorded on 12/31/17
-- Because transactions begin 12/02/2014, it is assumed that earlier payments were paid on time and tenants were charged 3x deposit rate
-- The final dataset has 1,203 bad tenants and 10,266 good tenants
+- Target created by intersecting wildfire boundaries with county lines
+- The total wildfire acreage for the intersected county is calculated by multiplying the percent overlap of the wildfire boundary and the county and the total acreage of the wildfire. 
+- The target variable is then summed up at the county-month level to provide the total amount of acreage burned in a county in a month due to wildfires. 
+- The burned acreage is not distinct and therefore the total acreage burned can consist of the same area being burned multiple times if multiple wildfires occurred on that area in a month. 
+- The final dataset consisted of 715 wildfires that took place in California between 2016 and 2020. 
 
 | Bad Tenant Indicator                                                                              | Format                                                                                                              |
 | ------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------:|
