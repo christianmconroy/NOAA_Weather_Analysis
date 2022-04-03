@@ -111,51 +111,38 @@ In order to assess the extent to which patterns in specific weather variables ma
 
 Overall, the RMSE for all models is consistently low. 
 
-| Model*                           | AUC   | Precision | Recall    | F1  | Accuracy**  |
-| -------------------------------- |:-----:| --------- | --------- | ----|-------------|      
-| Logistic Regression              | 59.8% | 68%       | 21%       | 32% | 90.5%       |
-| Decision Tree                    | 59.8% | 68%       | 21%       | 32% | 90.5%       |
-| Random Forest                    | 60.5% | 40%       | 26%       | 31% | 87.9%       |
-| Gradient Boosted Regression Tree | 58%   | 72%       | 17%       | 27% | 90.4%       |
-| Support Vector Machine           | 60%   | 68%       | 21%       | 32% | 90.5%       | 
+| Model*                                     | RMSE                   |
+| ------------------------------------------ |-----------------------:|      
+| K Nearest Neighbor                         | 2.4424462988947097e-07 | 
+| Linear Regression                          | 5.050678035429983e-07  | 
+| Ridge Regression                           | 2.3014995833472946e-07 | 
+| Lasso Regression                           | 2.2346137676436195e-07 | 
+| Decision Tree                              | 2.9282640022527463e-07 | 
+| Random Forest                              | 2.251606310821253e-07  | 
+| SGD Regression                             | 2.2714813966008742e-07 | 
+| Gradient Boosted Regression Tree (GBR)     | 2.5085824023407695e-07 |
+| Gradient Boosted Regression Tree (xgboost) | 2.6560586051932703e-09 |
+
 
 *\*The above results are based on evaluating the trained model on a hold-out test set*
-
-*\*\*Accuracy is not a valuable metric here given imbalance with the target variable*
-
-
-### Model Results - Upsampled Dataset
-
-| Model*                           | AUC   | Precision | Recall | F1  | Accuracy**  |
-| -------------------------------- |:-----:| --------- | -------| ----|-------------|      
-| Logistic Regression              | 65.3% | 70%       | 54%    | 61% | 65.4%       |
-| Decision Tree                    | 65.8% | 71%       | 53%    | 61% | 65.8%       |
-| Random Forest                    | 94.1% | 90%       | 100%   | 94% | 94.1%       |
-| Gradient Boosted Regression Tree | 66.2% | 71%       | 55%    | 62% | 66.2%       |
-| Support Vector Machine           | 66.2% | 69%       | 56%    | 62% | 66.6%       | 
-
-*\*The above results are based on evaluating the trained model on a hold-out test set*
-
-*\*\*Accuracy is not a valuable metric here given imbalance with the target variable*
-
 
 ### Model Results - Downsampled Dataset
 
-| Model*                           | AUC   | Precision | Recall | F1  | Accuracy**  |
-| -------------------------------- |:-----:| --------- | -------| ----|-------------|      
-| Logistic Regression              | 67.4% | 74%       | 56%    | 64% | 67.2%       |
-| Decision Tree                    | 65.6% | 72%       | 52%    | 61% | 65.4%       |
-| Random Forest                    | 61.6% | 62%       | 62%    | 62% | 61.6%       |
-| Gradient Boosted Regression Tree | 67.6% | 73%       | 57%    | 64% | 67.4%       |
-| Support Vector Machine           | 67%   | 75%       | 52%    | 62% | 66.6%       | 
+| Model*                                     | RMSE                  |
+| ------------------------------------------ |----------------------:|      
+| K Nearest Neighbor                         | 6.030309426243974e-07 | 
+| Linear Regression                          | 5.597711477151465e-07 | 
+| Ridge Regression                           | 5.59846311993141e-07  | 
+| Lasso Regression                           | 5.650797324886484e-07 | 
+| Decision Tree                              | 5.650797324886484e-07 | 
+| Random Forest                              | 5.507037084915353e-07 | 
+| SGD Regression                             | 5.621826293691378e-07 | 
+| Gradient Boosted Regression Tree (GBR)     | 5.818739938194459e-07 |
+| Gradient Boosted Regression Tree (xgboost) | 5.650797323649904e-07 |
 
 *\*The above results are based on evaluating the trained model on a hold-out test set*
 
-*\*\*Accuracy is not a valuable metric here given imbalance with the target variable*
 
 ## Conclusions
-- Random Forest on the upsampled version of the data offered the best performance as measured by AUC (94.1%)
-- Length of contract history, age at the start of contract history, and the use of cash for payment appeared to be most important in predicting bad tenants
-- Evaluation on an upsampled version of the data showed significant performance gain
-
-![](https://github.com/christianmconroy/Projects/blob/master/bad_tenant_ml_modeling/images/feature%20imp.png)
+- Overall, the RMSE for all models tested is very low. Improvements can be gained in future modeling by bringing in more states and more years, as well as by brinnging in other variables (e.g. vegetation volume). 
+- Though only by a very small margin, gradient boosted regression trees, and specifically the GBR variant of the model, appears to offer the bbest likelihood for model accuracy, as demonstrated by modeling on the downsampled version of the training data.  
