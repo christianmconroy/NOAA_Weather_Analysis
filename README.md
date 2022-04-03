@@ -24,7 +24,7 @@ measurement stations within the ISD data source.
 
 The wildfire data is published by the [National Interagency Fire Center](https://data-nifc.opendata.arcgis.com/datasets/nifc::interagency-fire-perimeter-history-all-years/about) and includes measurements on wildfire occurrence and acreage impacted. Wildfire boundaries were intersected with 2019 Us County lines in order to develop a metric for acreage of specific counties impacted  by wildfires on an annual basis. 
 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/fire_usa_counties.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/fires_usa_counties.png)
 
 The final merged dataset includes minimum and maximum weather variables, number of wildfires, and total acreage damaged by wildfires by month and by county within the state of California between 2016 and 2020. 
 
@@ -32,39 +32,39 @@ The final merged dataset includes minimum and maximum weather variables, number 
 In order to assess the extent to which patterns in specific weather variables may be divergent from normal patterns across all U.S. states (i.e. warmer temperatures in the Summer months and colder temperatures in the winter months), time series on the minimum and maximums across weather variables per day were compared for both California and Georgia.  
 
 ### Air Temperature 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/master/outputs/images/min_max_airremp_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/master/outputs/images/min_max_airremp_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_airremp_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_airremp_ga.png)
 
 - While both Georgia and California follow similar patterns of warm and cold temperatures - low temperatures around January, for example - there occurred to be more days with maximum temperatures below 0 in Georgia compared to California. This may be due to the fact that California's temperatures likely vary more widely than those of Georgia due to the larger area covered by the state. 
 - The lowest temperature in California over the study period occurred in December 2017 while the lowest temperature in Georgia occurred in January 2018. These low temperatures occurred during the [December 2017-January 2018 North American cold wave](https://en.wikipedia.org/wiki/December_2017%E2%80%93January_2018_North_American_cold_wave) when a polar vortex froze a large part of the United States. 
 - The highest temperature in California over the study period occurred in late August 2020 while the highest temperature in Georgia occurred in Fall 2019. August 2020 set a [record](https://www.latimes.com/california/story/2020-09-10/a-sizzling-record-august-was-hottest-month-on-record-in-california) for high temperatures in California.
 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/freezing_days_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/freezing_days_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/freezing_days_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/freezing_days_ga.png)
 
 ### Wind Speeds 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_windsp_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_windsp_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_windsp_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_windsp_ga.png)
 
 - The highest wind speed for California over the reporting period occurred in early Summer 2017 and was higher than that of Georgia, which occurred in early Spring 2020. High winds have traditionally been a [major contributing factor](https://www.washingtonpost.com/weather/2019/10/28/whats-driving-historic-california-high-wind-events-worsening-wildfires/) to the spread of wildfires in California. 
 - Georgia appeared to have far more days with a minimum wind speed qualifying as calm or no wind than did California. 
 - Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
 - For all years, low sustained wind speeds were most frequent each year in terms of the maximum wind speed per state per day in Georgia. By contrast, non-threatening or very low wind speeds were most frequent per day in California. The categories are derived from the National Weather Service's [Graphical Hazardous Weather Outlook](https://www.weather.gov/mlb/seasonal_wind_threat). 
 
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/high_wind_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/high_wind_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/high_wind_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/high_wind_ga.png)
 
 ### Sea Level Pressure
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_sealevelpressure_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_sealevelpressure_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_sealevelpressure_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_sealevelpressure_ga.png)
 
 - The trajectories for minimum and maximum sea level pressure as measured by hectopascals were more similar for Georgia and California as compared to other analyzed weather variables. In both states, sea level pressure tended to rise in the Winter and fall during the Summer. 
 - The two states even experienced the same significant trough in sea level pressure in early Winter 2017, with Georgia at only 990 hectopascals and California only slightly above that number. 
 - Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
 
 ### Accumulated Liquid Precipitation
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_max_preciphourly_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/outputs/images/min_maxpreciphourly_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_max_preciphourly_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/blob/main/outputs/images/min_maxpreciphourly_ga.png)
 
 - Georgia experienced many more days of higher rainfall as measured by liquid precipitation depth over one hour duration, with many days over the study period experiencing maximums of over 10 millimeters. In contrast, California did not experience a single day of liquid precipitation depth of over 10 millimeters during the study period. This makes sense given the dry conditions in California. 
 - The highest liquid precipitation depth for California occurred in early Spring 2017, with the state receiving a maximum of just over 7 millimeters. This period of rainfall in California is well documented, and was at the tail end of the [wettest Winter in California on record](https://www.kqed.org/news/11407012/the-rainy-season-of-2016-17-is-officially-one-for-the-record-books). 
