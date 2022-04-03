@@ -59,18 +59,12 @@ In order to assess the extent to which patterns in specific weather variables ma
 - Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
 
 ### Sea Level Pressure
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_preciphourly_ca.png)
-![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_maxpreciphourly_ga.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_sealevelpressure_ca.png)
+![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_sealevelpressure_ga.png)
 
-- 32 tenants appeared likely to have been evicted based on having gaps on:
-  -The amount of rent they paid versus how much they owed based on contract start and end date or 12/31/2017
-  - The number of payments short they were based on how many payments they should have made based on contract start and end date of 12/31/2017
-- Almost all had a pattern of late rent payment and three-quarters paid the highest late fee on at least one occasion
-
-| Likely Eviction Cause | Number of Tenants                                              |
-| -------------------------------------------------------------------------------- |:---:|
-| Late payment more than 3 months                                                  | 31  |
-| Rent lateness hitting or exceeding largest late fee (Half of monthly rent extra) | 24  |
+- The trajectories for minimum and maximum sea level pressure as measured by hectopascals were more similar for Georgia and California as compared to other analyzed weather variables. In both states, sea level pressure tended to rise in the Winter and fall during the Summer. 
+- The two states even experienced the same significant trough in sea level pressure in early Winter 2017, with Georgia at only 990 hectopascals and California only slightly above that number. 
+- Cyclical trends in wind speeds were far less pronounced for Georgia than California. Wind speeds appeared to increase in particular during Spring and early Summer in California. 
 
 ### Accumulated Liquid Precipitation
 ![](https://github.com/christianmconroy/NOAA_Weather_Analysis/images/min_max_preciphourly_ca.png)
@@ -79,13 +73,9 @@ In order to assess the extent to which patterns in specific weather variables ma
 - Georgia experienced many more days of higher rainfall as measured by liquid precipitation depth over one hour duration, with many days over the study period experiencing maximums of over 10 millimeters. In contrast, California did not experience a single day of liquid precipitation depth of over 10 millimeters during the study period. This makes sense given the dry conditions in California. 
 - The highest liquid precipitation depth for California occurred in early Spring 2017, with the state receiving a maximum of just over 7 millimeters. This period of rainfall in California is well documented, and was at the tail end of the ![wettest Winter in California on record](https://www.kqed.org/news/11407012/the-rainy-season-of-2016-17-is-officially-one-for-the-record-books). 
 - The highest liquid precipitation depth for Georgia occurred in early Summer 2017, when a liquid precipitation depth of over 30 millimeters was recorded in the state. Hurricane season was ![extremely active](https://patch.com/georgia/atlanta/extremely-active-2017-hurricane-season-updated-georgia-forecast) in Georgia in 2017, leading to increased precipitation that year. 
+- Precipitation levels followed an expected trajectory in California over the study period, with maximum precipitation being comparatively low during the Summer months every year.
 
-| Likely Eviction Cause | Number of TeGnants                                              |
-| -------------------------------------------------------------------------------- |:---:|
-| Late payment more than 3 months                                                  | 31  |
-| Rent lateness hitting or exceeding largest late fee (Half of monthly rent extra) | 24  |
-
-## Developing a Predictive Model for Bad Tenants<br><sup> Methods and Evaluation</sup>
+## Developing a Predictive Model for Wildfire Spread<br><sup> Methods and Evaluation</sup>
 
 ### The Target Variable
 - Target created by setting a 25% threshold on the average of 8 normalized features indicative of bad tenant behavior 
