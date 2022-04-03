@@ -21,14 +21,16 @@ on weather pattern and wildfire data for the U.S. state of California aggregated
 Integrated Surface Data (ISD) Lite,  a global database that consists of hourly and synoptic surface observations compiled from numerous sources into a 
 single common ASCII format and common data model. Fields included: 
 
-1.	Air temperature (degrees Celsius * 10)
-2.	Dew point temperature (degrees Celsius * 10)
-3.	Sea level pressure (hectopascals)
-4.	Wind direction (angular degrees)
-5.	Wind speed (meters per second * 10)
-6.	Total cloud cover (coded, see format documentation)
-7.	One-hour accumulated liquid precipitation (millimeters)
-8.	Six-hour accumulated liquid precipitation (millimeters)
+| Weather Variable                          | Format                          |
+| ------------------------------------------|:-------------------------------:|
+| Air temperature                           | degrees Celsius * 10            |
+| Dew point temperature                     | degrees Celsius * 10            |
+| Sea level pressure                        | hectopascals                    |
+| Wind direction                            | angular degrees                 |
+| Wind speed                                | meters per second * 10          |
+| Total cloud cover                         | coded, see format documentation |
+| One-hour accumulated liquid precipitation | millimeters                     |
+| Six-hour accumulated liquid precipitation | millimeters                     |
 
 Further information on the data source can be found in the Documents directory of this repository. 
 
@@ -84,51 +86,30 @@ In order to assess the extent to which patterns in specific weather variables ma
 - The burned acreage is not distinct and therefore the total acreage burned can consist of the same area being burned multiple times if multiple wildfires occurred on that area in a month. 
 - The final dataset consisted of 715 wildfires that took place in California between 2016 and 2020. 
 
-| Bad Tenant Indicator                                                                              | Format                                                                                                              |
-| ------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------:|
-| Rent amount short  based on expected amount between contract start and end or 12/31/17            | Amount                                                                                                              |
-| Number of rent payments short based on expected amount between contract start and end or 12/31/17 | Volume                                                                                                              |
-| Number of late payments                                                                           | Volume                                                                                                              |
-| Average late fee percentage                                                                       | Percent                                                                                                            |
-| Maximum late fee percentage                                                                       | Percent                                                                                                            |
-| Latest payment                                                                                    | Days                                                                                                                |
-| Deposit Status                                                                                    | 0 for deposit returned or contract term not yet ended; 0.5 for partial return, and 1 for non-return               |
 
 ### The Features
 
-- 8 features serve as input variables for the model
-- The aggregated values are based on whatever the time period is for the tenant 
-- A control variable is included to indicate whether a tenant has concluded contract history or is still within contract as of 12/31/17
-- Percentages are used to control for the length of contract history and payment methods for contracts that began before 12/02/2014
-- The labelling window encompasses the 72-month period between the first contract date and the last transaction payments recorded on 12/31/17
-
-| Feature                           | Format  |
-| --------------------------------- |:-------:|
-| Contract History                  | Days    |
-| Age at Start of Contract History  | Years   |
-| Number of Contracts               | Volume  |
-| Number of Payment Methods         | Percent |
-| Tenant Reached End of Contract    | Boolean |
-| Direct Debit Portion of Payments  | Percent |
-| Cash Portion of Payments          | Percent |
-| Bank Transfer Portion of Payments | Percent |
+- 25 features serve as input variables for the model
+- Feature variables consist of the maximum and minimum for each weather variable and one hot encoding for the month
+- The mimumum for 360 wind direction and sky condition are both dropped from the model as they are consistently 0 for all observations.
 
 ### The Approach
 
 - 5 different supervised learning methods are evaluated
-  - Logistic Regression
+  - K Nearest Neighbor
+  - Linear Regression
+  - Ridge Regression
+  - Lasso Regression
   - Decision Tree
   - Random Forest
+  - SGD Regression
   - Gradient Boosted Regression Tree
-  - Support Vector Machine
-- Due to class imbalance (bad tenants represented only 10.5% of the tenants overall), both upsampled and downsampled versions of the data are evaluated
-- L1 regularization, or lasso, is applied where relevant for feature selection 
-- Feature importance plots are employed to provide explainability for models 
-- Random Search and Random Grid are used for hyperparameter optimization 
-- Models are primarily compared based on the Area Under the ROC Curve (AUC) metric providing an aggregate measure of performance across classification thresholds
-- AUC is more useful than accuracy as an evaluation measure due to class imbalance 
+- Due to class imbalance (counties experiencing wildfires on a given month represented only 26.4% of the tenants overall), a downsampled versions of the data is evaluated as well.  
+- Models are primarily compared based on the Root Mean Squared Error (RMSE) metric, which provides a measure of the normalized distance between the vector of predicted values and the vector of observed values.
 
 ### Model Results - Full Dataset
+
+Overall, the RMSE for all models is consistently low. 
 
 | Model*                           | AUC   | Precision | Recall    | F1  | Accuracy**  |
 | -------------------------------- |:-----:| --------- | --------- | ----|-------------|      
